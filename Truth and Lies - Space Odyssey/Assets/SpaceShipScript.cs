@@ -8,7 +8,9 @@ public class SpaceShipScript : MonoBehaviour
     //public Rigidbody2D spaceShipRigidBody;
 
     private GameObject shipBody;
-    public float moveShip = 5;
+    
+    //public float moveShip = 5;
+
     // Start is called before the first frame update
     void Start()
     {
