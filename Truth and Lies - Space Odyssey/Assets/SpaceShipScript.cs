@@ -8,26 +8,35 @@ public class SpaceShipScript : MonoBehaviour
     //public Rigidbody2D spaceShipRigidBody;
 
     private GameObject shipBody;
-    
+    public LogicScript logic;
+    public bool shipIsAlive = true;
+
     //public float moveShip = 5;
 
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Timer").GetComponent<LogicScript>();
+
         shipBody = GameObject.Find("Spaceship");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        // check to see if ship has not crashed
+        if (shipIsAlive)
         {
-            moveUp();
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                moveUp();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                moveDown();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            moveDown();
-        }
+
 
     }
 
@@ -41,7 +50,21 @@ public class SpaceShipScript : MonoBehaviour
     public void moveDown()
     {
 
-        // Moves an object up 2 units
+        // Moves an object down 2 units
         shipBody.transform.position += new Vector3(0, -2, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        
+            logic.gameOver();
+            shipIsAlive = false;
+    
+
+    }
 }
+//     {
+//         logic.gameOver();
+//         shipIsAlive = false;
+//     }
+// }

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6747349395267914413}
   - component: {fileID: 6747349395267914067}
   - component: {fileID: 6747349395267914412}
+  - component: {fileID: 2822870448273906936}
   m_Layer: 0
   m_Name: Top Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +102,27 @@ CircleCollider2D:
   m_Offset: {x: 0.09000003, y: -0.00999999}
   serializedVersion: 2
   m_Radius: 1
+--- !u!50 &2822870448273906936
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747349395267914414}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6747349395573581794
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,9 +183,10 @@ GameObject:
   - component: {fileID: 6747349395651155948}
   - component: {fileID: 6747349395651155858}
   - component: {fileID: 6747349395651155859}
+  - component: {fileID: 3986284288546992028}
   m_Layer: 0
   m_Name: Middle Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,6 +274,27 @@ CircleCollider2D:
   m_Offset: {x: 0.09000003, y: -0.00999999}
   serializedVersion: 2
   m_Radius: 1
+--- !u!50 &3986284288546992028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747349395651155949}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6747349396607450160
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,9 +306,10 @@ GameObject:
   - component: {fileID: 6747349396607450167}
   - component: {fileID: 6747349396607450165}
   - component: {fileID: 6747349396607450166}
+  - component: {fileID: 6101257726402110391}
   m_Layer: 0
   m_Name: Bottom Asteroid
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,3 +397,24 @@ CircleCollider2D:
   m_Offset: {x: 0.09000003, y: -0.00999999}
   serializedVersion: 2
   m_Radius: 1
+--- !u!50 &6101257726402110391
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747349396607450160}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
