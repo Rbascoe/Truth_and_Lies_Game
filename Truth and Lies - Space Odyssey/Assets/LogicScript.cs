@@ -29,7 +29,7 @@ public class LogicScript : MonoBehaviour
     }
 
 
-    public string gameTimer()
+        public float gameTimer()
     {
         if (timerIsRunning)
         {
@@ -38,14 +38,15 @@ public class LogicScript : MonoBehaviour
                timeRemaining -= Time.deltaTime;
                 // Debug.Log(timeRemaining);
             }
-            else
+            else if (timeRemaining <= 0)
             {
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
         }
-        return timerText.text = timeRemaining.ToString();
+        timerText.text = timeRemaining.ToString();
+        return timeRemaining;
     }
 
 
@@ -59,35 +60,4 @@ public class LogicScript : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
-
-    // public float timer()
-    // {
-    // if (timerIsRunning)
-    // {
-    //     if (timeRemaining > 0)
-    //     {
-    //         timeRemaining -= Time.deltaTime;
-    //         // Debug.Log(timeRemaining);
-    //         if (timeRemaining == 0)
-    //         {
-    //             Debug.Log("Time has run out!");
-    //             timerIsRunning = false;
-    //             return timeRemaining;
-    //         }
-    //     }
-    // else
-    // {
-    //     Debug.Log("Time has run out!");
-    //     timeRemaining = 0;
-    //     timerIsRunning = false;
-    //     return timeRemaining;
-    // }
-    // }
-    // Debug.Log(timerText.text = timeRemaining.ToString());
-    // return timeRemaining;
-    //     for (float i = timeRemaining; i > 0; i = i - Time.deltaTime){
-    //         timeRemaining = i;
-    //     }
-    //     return timeRemaining;
-    // }
 }

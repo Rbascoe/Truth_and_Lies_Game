@@ -11,7 +11,7 @@ public class AsteroidSpawnScript : MonoBehaviour
     public float spawnRate = 15f;
     private float timer = 0;
 
-    public bool startSpawn;
+    public bool startSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,16 +51,32 @@ public class AsteroidSpawnScript : MonoBehaviour
 
     }
 
+    // void spawnAsteroid()
+    // {
+    //     if (startSpawn)
+    //     {
+    //         Debug.Log(gameTimer.gameTimer());
+    //         if (gameTimer.gameTimer() != "0")
+    //         {
+    //             Instantiate(asteroid, transform.position, transform.rotation);
+    //         }
+    //         else
+    //         {
+    //             startSpawn = false;
+    //             Debug.Log("Spawn Stopped");
+    //         }
+    //     }
+    // }
+
     void spawnAsteroid()
     {
         if (startSpawn)
         {
             Debug.Log(gameTimer.gameTimer());
-            if (gameTimer.gameTimer() != "0")
-            {
+            
                 Instantiate(asteroid, transform.position, transform.rotation);
-            }
-            else
+            
+            if (gameTimer.gameTimer() <= 0)
             {
                 startSpawn = false;
                 Debug.Log("Spawn Stopped");
