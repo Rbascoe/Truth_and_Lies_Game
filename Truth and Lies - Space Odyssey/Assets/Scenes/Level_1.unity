@@ -624,9 +624,9 @@ GameObject:
   m_Component:
   - component: {fileID: 840737269}
   - component: {fileID: 840737268}
-  - component: {fileID: 840737271}
   - component: {fileID: 840737270}
   - component: {fileID: 840737272}
+  - component: {fileID: 840737273}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Untagged
@@ -715,33 +715,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logic: {fileID: 0}
   shipIsAlive: 1
---- !u!68 &840737271
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840737266}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.2999468, y: 0.49867022}
-  - {x: 0.013297871, y: 0.49867022}
-  - {x: 1.2560947, y: -0.003977813}
-  - {x: 1.013464, y: -0.184493}
-  - {x: -0.08147382, y: -0.35110387}
-  - {x: -1.1383613, y: -0.544719}
-  - {x: -1.2931384, y: 0.4587767}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!50 &840737272
 Rigidbody2D:
   serializedVersion: 4
@@ -763,6 +736,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &840737273
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840737266}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.87, y: 0.75}
+  m_EdgeRadius: 0
 --- !u!1 &1101635320
 GameObject:
   m_ObjectHideFlags: 0
