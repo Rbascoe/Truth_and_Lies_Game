@@ -10,16 +10,16 @@ public class LogicScript : MonoBehaviour
     public TextMeshProUGUI timerText;
     //Timer Settings
     public float timeRemaining;
-    public bool timerIsRunning = false;
+    public bool timerIsRunning = true;
 
     public GameObject gameOverScreen;
-    //public bool hasLimit;
 
     // Start is called before the first frame update
     void Start()
     {
         timeRemaining = 35f;
         timerIsRunning = true;
+
     }
 
     // Update is called once per frame
@@ -29,14 +29,15 @@ public class LogicScript : MonoBehaviour
     }
 
 
-        public float gameTimer()
+    public float gameTimer()
     {
         if (timerIsRunning)
         {
+
             if (timeRemaining > 0)
             {
-               timeRemaining -= Time.deltaTime;
-                // Debug.Log(timeRemaining);
+                timeRemaining -= Time.deltaTime;
+
             }
             else if (timeRemaining <= 0)
             {

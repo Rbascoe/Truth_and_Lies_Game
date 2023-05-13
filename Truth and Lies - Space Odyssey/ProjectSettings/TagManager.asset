@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Timer
   - Ship
+  - Asteroid
+  - Spawner
   layers:
   - Default
   - TransparentFX

@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 434951391}
   m_Layer: 0
   m_Name: AsteroidSpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf2894fb47cd694096c82dea9e364f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTimer: {fileID: 0}
+  gameTimer: {fileID: 1762830230}
   asteroid: {fileID: 6747349395573581794, guid: df7deae437b7b674eaeea1aecbea9f45, type: 3}
   spawnRate: 15
   startSpawn: 0
@@ -1267,6 +1267,7 @@ MonoBehaviour:
   timeRemaining: 0
   timerIsRunning: 0
   gameOverScreen: {fileID: 804822405}
+  spawner: {fileID: 434951391}
 --- !u!4 &1762830231
 Transform:
   m_ObjectHideFlags: 0

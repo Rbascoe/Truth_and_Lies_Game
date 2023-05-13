@@ -5,17 +5,21 @@ using UnityEngine;
 public class AsteroidSpawnScript : MonoBehaviour
 {
 
-    public LogicScript gameTimer;
+    public LogicScript logic;
     public GameObject asteroid;
 
     public float spawnRate = 15f;
     private float timer = 0;
-
-    public bool startSpawn;
+    public bool startSpawn = false;
     // Start is called before the first frame update
+    void Awake()
+    {
+        logic = GameObject.FindGameObjectWithTag("Timer").GetComponent<LogicScript>();
+
+
+    }
     void Start()
     {
-        gameTimer = GameObject.FindGameObjectWithTag("Timer").GetComponent<LogicScript>();
         startSpawn = true;
         spawnAsteroid();
     }
@@ -25,32 +29,33 @@ public class AsteroidSpawnScript : MonoBehaviour
     {
 
 
+
         if (timer < spawnRate)
         {
             timer += Time.deltaTime;
         }
         else
         {
-            spawnAsteroid();
-            timer = 0;
-
+            if (startSpawn && (logic.gameTimer() > 0))
+            {
+                Debug.Log(logic.gameTimer());
+                spawnAsteroid();
+                timer = 0;
+            }
+            else if (logic.gameTimer() == 0)
+            {
+                Debug.Log(logic.gameTimer());
+                startSpawn = false;
+                timer = 0;
+            }
         }
 
     }
 
-    void spawnAsteroid()
+    public void spawnAsteroid()
     {
-        if (startSpawn == true)
-        {
-            Debug.Log(gameTimer.gameTimer());
-            
-            Instantiate(asteroid, transform.position, transform.rotation);
-            
-            if (gameTimer.gameTimer() == 0)
-            {
-                startSpawn = false;
-                Debug.Log("Spawn Stopped");
-            }
-        }
+
+        Instantiate(asteroid, transform.position, transform.rotation);
+
     }
 }

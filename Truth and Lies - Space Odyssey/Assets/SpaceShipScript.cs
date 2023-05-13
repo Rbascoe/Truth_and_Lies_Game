@@ -11,8 +11,6 @@ public class SpaceShipScript : MonoBehaviour
     public LogicScript logic;
     public bool shipIsAlive = true;
 
-    //public float moveShip = 5;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,17 +52,13 @@ public class SpaceShipScript : MonoBehaviour
         shipBody.transform.position += new Vector3(0, -2, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
-            logic.gameOver();
-            shipIsAlive = false;
-    
+
+        logic.gameOver();
+        shipIsAlive = false;
+
 
     }
 }
-//     {
-//         logic.gameOver();
-//         shipIsAlive = false;
-//     }
-// }
+
